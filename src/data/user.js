@@ -1,24 +1,24 @@
 const INFO = {
 	main: {
-		title: "Reactfolio by truethari",
-		name: "Tharindu N.",
-		email: "mail@tharindu.dev",
+		title: "Keimal Portofolio",
+		name: "Keimal Reyyan",
+		email: "reyyankeimal1@gmail.com",
 		logo: "../logo.png",
 	},
 
 	socials: {
-		twitter: "https://twitter.com/",
-		github: "https://github.com/",
-		linkedin: "https://linkedin.com/",
-		instagram: "https://instagram.com/",
+		twitter: "https://twitter.com/KeimalReyyan",
+		github: "https://github.com/keirey",
+		linkedin: "https://www.linkedin.com/in/keimalreyyan/",
+		instagram: "https://instagram.com/keimaaal",
 		stackoverflow: "https://stackoverflow.com/",
 		facebook: "https://facebook.com/",
 	},
 
 	homepage: {
-		title: "Full-stack web and mobile app developer, and amateur astronaut.",
+		title: "Frontend web and mobile, and an Anime.",
 		description:
-			"I am a backend developer with expertise in Node.js. I have experience in building scalable, secure and reliable web applications using various frameworks and technologies. I enjoy solving complex problems and learning new skills. I am passionate about creating high-quality code that follows best practices and industry standards. I am always looking for new challenges and opportunities to grow as a developer.",
+			"I am a frontend developer with expertise in React-js. I have experience in building scalable, secure and reliable web applications using various frameworks and technologies. I enjoy solving complex problems and learning new skills. I am passionate about creating high-quality code that follows best practices and industry standards. I am always looking for new challenges and opportunities to grow as a developer.",
 	},
 
 	about: {
@@ -38,7 +38,7 @@ const INFO = {
 			title: "Project 1",
 			description:
 				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
+			logo: "https://icons.veryicon.com/png/o/business/vscode-program-item-icon/javascript-3.png",
 			linkText: "View Project",
 			link: "https://github.com",
 		},
@@ -47,7 +47,7 @@ const INFO = {
 			title: "Project 2",
 			description:
 				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/python/python.png",
+			logo: "https://cdn.iconscout.com/icon/free/png-256/free-python-3521655-2945099.png",
 			linkText: "View Project",
 			link: "https://github.com",
 		},
@@ -56,7 +56,7 @@ const INFO = {
 			title: "Project 3",
 			description:
 				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/html/html.png",
+			logo: "https://cdn-icons-png.flaticon.com/512/732/732212.png",
 			linkText: "View Project",
 			link: "https://github.com",
 		},
@@ -65,7 +65,7 @@ const INFO = {
 			title: "Project 4",
 			description:
 				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
+			logo: "https://icons.veryicon.com/png/o/business/vscode-program-item-icon/javascript-3.png",
 			linkText: "View Project",
 			link: "https://github.com",
 		},
@@ -74,7 +74,7 @@ const INFO = {
 			title: "Project 5",
 			description:
 				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
+			logo: "https://icons.veryicon.com/png/o/business/vscode-program-item-icon/javascript-3.png",
 			linkText: "View Project",
 			link: "https://github.com",
 		},

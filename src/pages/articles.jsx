@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { Helmet } from "react-helmet";
 
 import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
@@ -11,6 +10,8 @@ import SEO from "../data/seo";
 import myArticles from "../data/articles";
 
 import "./styles/articles.css";
+import { HelmetProvider } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 
 const Articles = () => {
 	useEffect(() => {
@@ -20,7 +21,7 @@ const Articles = () => {
 	const currentSEO = SEO.find((item) => item.page === "articles");
 
 	return (
-		<React.Fragment>
+		<HelmetProvider>
 			<Helmet>
 				<title>{`Articles | ${INFO.main.title}`}</title>
 				<meta name="description" content={currentSEO.description} />
@@ -58,6 +59,7 @@ const Articles = () => {
 										<Article
 											key={(index + 1).toString()}
 											date={article().date}
+											tech={article().tech}
 											title={article().title}
 											description={article().description}
 											link={"/article/" + (index + 1)}
@@ -72,7 +74,7 @@ const Articles = () => {
 					</div>
 				</div>
 			</div>
-		</React.Fragment>
+		</HelmetProvider>
 	);
 };
 

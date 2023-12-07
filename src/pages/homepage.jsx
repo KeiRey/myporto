@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faTwitter,
 	faGithub,
-	faStackOverflow,
+	// faStackOverflow,
 	faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 
@@ -15,7 +15,7 @@ import Footer from "../components/common/footer";
 import NavBar from "../components/common/navBar";
 import Article from "../components/homepage/article";
 import Works from "../components/homepage/works";
-import AllProjects from "../components/projects/allProjects";
+// import AllProjects from "../components/projects/allProjects";
 
 import INFO from "../data/user";
 import SEO from "../data/seo";
@@ -69,7 +69,7 @@ const Homepage = () => {
 	};
 
 	return (
-		<React.Fragment>
+		<HelmetProvider>
 			<Helmet>
 				<title>{INFO.main.title}</title>
 				<meta name="description" content={currentSEO.description} />
@@ -104,7 +104,9 @@ const Homepage = () => {
 								<div className="homepage-image-container">
 									<div className="homepage-image-wrapper">
 										<img
-											src="homepage.jpg"
+											width={'100%'}
+											height={'100%'}
+											src="home.jpg"
 											alt="about"
 											className="homepage-image"
 										/>
@@ -135,16 +137,6 @@ const Homepage = () => {
 								/>
 							</a>
 							<a
-								href={INFO.socials.stackoverflow}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faStackOverflow}
-									className="homepage-social-icon"
-								/>
-							</a>
-							<a
 								href={INFO.socials.instagram}
 								target="_blank"
 								rel="noreferrer"
@@ -167,7 +159,7 @@ const Homepage = () => {
 						</div>
 
 						<div className="homepage-projects">
-							<AllProjects />
+							{/* <AllProjects /> */}
 						</div>
 
 						<div className="homepage-after-title">
@@ -178,6 +170,7 @@ const Homepage = () => {
 										key={(index + 1).toString()}
 									>
 										<Article
+											tech={article().tech}
 											key={(index + 1).toString()}
 											date={article().date}
 											title={article().title}
@@ -199,7 +192,7 @@ const Homepage = () => {
 					</div>
 				</div>
 			</div>
-		</React.Fragment>
+		</HelmetProvider>
 	);
 };
 

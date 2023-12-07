@@ -2,16 +2,17 @@ import React from "react";
 
 function article_1() {
 	return {
-		date: "7 May 2023",
-		title: "The Benefits of Cloud Computing",
+		date: "September, 2023",
+		title: "E-Psipol SDM Polri",
 		description:
-			"Cloud computing offers a range of benefits, including cost savings and increased flexibility. Find out why more businesses are turning to the cloud.",
+			"Designing and implementing a web application utilized by the Indonesian National Police personnel for traffic incident reporting.",
 		keywords: [
 			"The Benefits of Cloud Computing",
-			"Tharindu",
-			"Tharindu N",
-			"Tharindu Nayanajith",
+			"Keimal",
+			"Keimal R",
+			"Keimal Nayanajith",
 		],
+		tech : ['ReactJs, MUI, React Redux, HighchartJs'],
 		style: `
 				.article-content {
 					display: flex;
@@ -41,16 +42,17 @@ function article_1() {
 
 function article_2() {
 	return {
-		date: "7 May 2023",
-		title: "Artificial Intelligence in Healthcare",
+		date: "January, 2022 — March, 2022",
+		title: "E-Commerce Web",
 		description:
-			"AI is transforming the healthcare industry, from improving patient outcomes to streamlining operations. Discover the latest applications of this game-changing technology.",
+			" design and implementation of an e-commerce application for PT. Hijau Solusi Utama, enhancing the online shopping experience for users. ",
 		style: ``,
+		tech : ['ReactJs, MUI, React Redux, HighchartJs'],
 		keywords: [
-			"Artificial Intelligence in Healthcare",
-			"Tharindu",
-			"Tharindu N",
-			"Tharindu Nayanajith",
+			"E-Commerce Web",
+			"Keimal",
+			"Keimal R",
+			"Keimal Reyyan",
 		],
 		body: (
 			<React.Fragment>

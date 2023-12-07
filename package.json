@@ -1,11 +1,11 @@
 {
 	"name": "reactfolio",
 	"version": "1.1.0",
-	"description": "Personal portfolio template built using Reactjs",
+	"description": "Keimal Portofolio",
 	"author": {
-		"name": "Tharindu N. Madhusanka",
-		"email": "mail@tharindu.dev",
-		"url": "https://tharindu.dev"
+		"name": "Keimal Reyyan P.",
+		"email": "mail@keimalcase.my.id",
+		"url": "https://keimalcase.my.id"
 	},
 	"license": "MIT",
 	"private": true,
@@ -22,6 +22,7 @@
 		"react-dom": "^18.2.0",
 		"react-ga4": "^2.1.0",
 		"react-helmet": "^6.1.0",
+		"react-helmet-async": "^2.0.3",
 		"react-router-dom": "^6.11.1",
 		"react-scripts": "5.0.1",
 		"styled-components": "^5.3.10",

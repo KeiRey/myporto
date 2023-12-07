@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { Helmet } from "react-helmet";
 
 import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
@@ -10,6 +9,7 @@ import INFO from "../data/user";
 import SEO from "../data/seo";
 
 import "./styles/contact.css";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 const Contact = () => {
 	useEffect(() => {
@@ -19,7 +19,7 @@ const Contact = () => {
 	const currentSEO = SEO.find((item) => item.page === "contact");
 
 	return (
-		<React.Fragment>
+		<HelmetProvider>
 			<Helmet>
 				<title>{`Contact | ${INFO.main.title}`}</title>
 				<meta name="description" content={currentSEO.description} />
@@ -84,7 +84,7 @@ const Contact = () => {
 					</div>
 				</div>
 			</div>
-		</React.Fragment>
+		</HelmetProvider>
 	);
 };
 
