@@ -1,93 +1,211 @@
-# MyPortofolio
+<!-- # Reactfolio V1.2 👩🏽‍🚀
 
+Reactfolio is a modern and customizable personal portfolio web template built using the popular React library. It provides an easy way for developers, designers, and creatives to showcase their work, skills, and achievements in a professiona and visually appealing way. With its responsive design and clean code, Reactfolio can be easily tailored to suit individual needs and preferences, making it an ideal choice for anyone looking to create a stunning online portfolio.
 
+<center>
+<img src="https://i.imgur.com/ZWPO61A.jpeg" alt="Reactfolio" />
+</center>
 
-## Getting started
+Live demo here: <a href="https://reactfolio.tharindu.dev/" target="_blank">reactfolio.tharindu.dev</a>
+<br/>
+Readme here: <a href="https://tharindu.dev/portfolio/reactfolio/" target="_blank">tharindu.dev/portfolio/reactfolio/</a>
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+-   [Features](#-features)
+-   [Getting started](#-getting-started)
+-   [Installation and Setup Instructions](#-installation-and-setup-instructions)
+-   [Folder structure](#-folder-structure)
+-   [Configurations](#-configurations)
+-   [Google Analytics](#-google-analytics)
+-   [Building the React App](#-building-the-react-app)
+-   [FAQ](#-faq)
+-   [Contribution](#-contribution)
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+## 📙 Features
 
-## Add your files
+-   📖 Multi-Page Layout
+    -   Home
+    -   About
+    -   Projects
+    -   Articles
+    -   Contact
+-   📱 Fully Responsive
+-   🛠 Easy configurations
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+## 📚 Getting started
 
+Clone down this repository. You will need `NodeJS` and `git` installed globally on your machine.
+
+## 🛠 Installation and Setup Instructions
+
+1. Installation: `npm install`
+
+2. Run the project: `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The page will reload if you make edits.
+
+## 📁 Folder structure
+
+-   `/public`: publicly accessible contents (ex: images, media).
+-   `/src`: all the components used in this project.
+    -   `/src/components/`: each reusable components of each pages.
+    -   `/src/data`: configurations of the web app.
+    -   `/src/pages`: pages that include in the web app.
+
+## ⚙️ Configurations
+
+Since this is a public and open source project, you can make any changes to it. If you are a ReactJS developer you can do it easily. But if you are a beginner, I have extracted the configurable data into a single directory, so you can edit the files in that directory to configure the entire web application.
+
+Directory: `/src/data/`
+
+-   `user.js`
+
+    From this you can change the content of each page of the web application.
+
+-   `articles.js`
+
+    From this you can add your articles to the web application.
+
+    Instructions:
+
+    -   Add new article
+
+        1. Create a new function starts with `article_`. For example you can add new function named `article_3`.
+
+        2. Then add the data accordingly.
+
+            - Add `<React.Fragment>` tag and it's closing tags in body.
+            - In React there has no keyword `class`, so you should use `className` to define html classes.
+
+            ```js
+            function article_3() {
+            	return {
+            		date: "7 May 2023",
+            		title: "The Benefits of Cloud Computing",
+            		description: "Why businesses are turning to the cloud.",
+            		style: `
+            				.random-image {
+            					align-self: center;
+            					outline: 2px solid red;
+            				}
+            				`,
+            		body: (
+            			<React.Fragment>
+            				<div className="article-content">
+            					<div className="paragraph">
+            						Content of article 1
+            					</div>
+            					<img
+            						src="https://picsum.photos/200/300"
+            						alt="random"
+            						className="random-image"
+            					/>
+            				</div>
+            			</React.Fragment>
+            		),
+            	};
+            }
+            ```
+
+        3. In the last lines you will see an array to which you need to add your new `articles` function.
+
+            ```js
+            const myArticles = [article_1, article_2, article_3];
+            ```
+
+-   `seo.js`
+
+    The SEO.js file is a module that contains an array of objects, with each object representing metadata for a specific page of a React website. The purpose of this file is to centralize and manage the SEO (Search Engine Optimization) information for different pages.
+
+    Each object in the SEO array has the following properties:
+
+    `page`: Represents the page name or identifier. It helps in mapping the SEO data to the appropriate page.
+
+    `title`: Specifies the title of the page. This title is typically displayed in the browser's title bar and is an important element for search engines.
+
+    `description`: Provides a concise and informative description of the page content. This description is often displayed in search engine results and can greatly influence click-through rates.
+    keywords: Contains an array of keywords relevant to the page's content. Keywords can help search engines understand the topics covered on the page and can impact its visibility in search results.
+    By storing the SEO information in the SEO.js file, you can easily manage and update the metadata for different pages of your React website. This approach allows you to keep the SEO data separate from the components and reuse it across the application, ensuring consistent and optimized metadata for each page.
+
+    Example:
+
+    ```js
+    const SEO = [
+    	{
+    		page: "home",
+    		description:
+    			"I am a backend developer with expertise in Node.js. I have experience in building scalable, secure and reliable web applications using various frameworks and technologies.",
+    		keywords: ["Tharindu", "Tharindu N", "Tharindu Nayanajith"],
+    	},
+    ];
+    ```
+
+-   `styles.css`
+
+    From this you can change the font colors and font families of the web application.
+
+    ```css
+    :root {
+    	/* ------- colors ------- */
+    	--primary-color: #27272a;
+    	--secondary-color: #65656d;
+    	--tertiary-color: #acacb4;
+    	--quaternary-color: #e4e4e7;
+    	--link-color: #14b8a6;
+    	/* ---------------------- */
+
+    	/* ------- fonts ------- */
+    	--primary-font: "Heebo", sans-serif;
+    	--secondary-font: "Roboto", sans-serif;
+    	/* --------------------- */
+    }
+    ```
+
+## 📈 Google Analytics
+
+Add your Google Analytics 4 MEASUREMENT ID to `/src/data/tracking.js`.
+
+How to find the Google Analytics 4 MEASUREMENT ID ?
+
+[https://support.google.com/analytics/answer/9539598?hl=en](https://support.google.com/analytics/answer/9539598?hl=en)
+
+## 🚀 Building the React App
+
+To build the React app, you can use the `npm run build` command. This will create a production-ready build of your app in the `build/` directory.
+
+Here are the steps to follow:
+
+1. Open a terminal window and navigate to the root directory of your React app.
+2. Run the `npm run build` command to create a production build of your app. This will generate a static bundle of your app in the `build/` directory.
+3. Copy the contents of the `build/` directory to your server's public directory. You can do this using an FTP client or by running a command like `scp` to transfer the files to your server. Make sure to replace `example.com` and `/var/www/html` with your server's domain name and public directory, respectively:
+
+    ```bash
+    scp -r build/* user@example.com:/var/www/html
+    ```
+
+4. Your portfolio app should now be accessible from your server's domain name. You can verify this by opening a web browser and navigating to http://example.com (replace example.com with your server's domain name).
+
+That's it! Your React portfolio app should now be up and running on your server. Note that you may need to configure your server's web server (e.g., Apache or Nginx) to serve the index.html file in the build/ directory as the default page for your domain.
+
+## 🤔 FAQ
+
+**Q1. Subpages can only be accessed through links on the homepage or navigation bar, but those pages are not accessible through direct links.**
+
+If you are using Apache as your web server, you can insert this into your .htaccess file:
+
+```c
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteRule . /index.html [L]
+</IfModule>
 ```
-cd existing_repo
-git remote add origin https://gitlab.com/reyyankeimal1/myportofolio.git
-git branch -M main
-git push -uf origin main
-```
 
-## Integrate with your tools
+## 🌱 Contribution
 
-- [ ] [Set up project integrations](https://gitlab.com/reyyankeimal1/myportofolio/-/settings/integrations)
-
-## Collaborate with your team
-
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+If you have any suggestions on what to improve in Reactfolio and would like to share them, feel free to leave an issue or fork project to implement your own ideas -->
